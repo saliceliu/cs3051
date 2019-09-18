@@ -1,4 +1,13 @@
-body{background-color: #FFFFE0;}
+body{
+    background-color: #A1C4FD;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-style: italic;
+}
 img.center{
     display: block;
     margin-left: auto;
