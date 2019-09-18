@@ -4,7 +4,7 @@ img.center{
     margin-left: auto;
     margin-right: auto;
 }
-.col{width:8.33%}
+.col{width:18.33%}
 .row{
     width:100%;
     display:flex;
@@ -14,7 +14,7 @@ img.center{
 @media only screen and (max-width: 767px) {
     /* For mobile phones: */
     .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
+    .col-s-12 {width: 16.66%;}
 }
 @media only screen and (min-width: 768px) {
     /* For laptops and desktops: */
