@@ -15,3 +15,10 @@ img.center{
         float: none; /* Added */
         margin-bottom: 10px; /* Added */
 }
+.menu .img {
+    max-width: 30%;
+    height: auto;
+
+
+}
+

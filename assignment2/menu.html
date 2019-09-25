@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assign2.css"/>
     <title>TH Restaurant</title>
 </head>
-<body>
+<body class="menu">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="index.html">TH Restaurant</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,50 +38,51 @@
     </nav>
 
     <h1 >Menu</h1>
+    <div class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
+        <tr>
+        <th scope="col">Starter</th>
+        <th scope="col">Pasta</th>
+        <th scope="col">Pizza</th>
+        <th scope="col">Dessert</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th scope="row">1</th>
+            <td>Tartare <br/>
+            <img src="https://bit.ly/2njlMnP" alt="Taratre" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" data-whatever="@tartare"/>
+            </td>
+            <td> Salmon Pasta <br/>
+            <img src="https://bit.ly/2ndJBx7" alt="Salmon Pasta" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal"/>
+            </td>
+            <td> Margherita <br/>
+            <img src="https://bit.ly/2lcznwz" alt="Margherita Pizza" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal"/>
+            </td>
+            <td> Crepe <br/>
+            <img src="https://bit.ly/2mHFWYi" alt="Crepe" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal"/>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+        <td> Tomato <br/>
+        <img src="https://bit.ly/2nbfBC2" alt="Tomato" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" />
+        </td>
+        <td>Chicken Pasta <br/>
+        <img src="https://bit.ly/2lPnDQT" alt="Chicken Pasta" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" />
+        </td>
+        <td>Chicken Pizza <br/>
+        <img src="https://bit.ly/2l9G02y" alt="Chicken Pizza" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" />
+        </td>
+        <td>Lemon Tart <br/>
+        <img src="https://bit.ly/2lNLz71" alt="Lemon Tarte" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" />
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
 
-    <table style="margin-left:auto;margin-right:auto;">
-            <tr>
-                <th> Starter </th>
-                <th> Pasta </th>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li> tartare <br/>
-                        <img src="https://bit.ly/2njlMnP" alt="Taratre" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" data-whatever="@tartare"/>
-                        </li>
-                        <li> tomato <br/>
-                        <img src="https://bit.ly/2nbfBC2" alt="Tomato" style="width:50%;height:50%;" data-toggle="modal" data-target="#exampleModal" />
-                        </li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li> salmon </li>
-                        <li> chicken </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th> Pizza </th>
-                <th> Dessert </th>
-            </tr>
-            <tr>
-                <td>
-                    <ul>
-                        <li> Margarita </li>
-                        <li> chickeen </li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li> crepe </li>
-                        <li> cake </li>
-                        <li> lemon tarte </li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
