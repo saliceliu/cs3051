@@ -40,17 +40,37 @@
     <h1> Hours and Location </h1>
 
     <p> Wood St, Kingston upon Thames KT1 1UJ, UK </p>
-    <h3> Brunch </h3>
-    <p> 11:00am - 3pm Sat & Sun </p>
-    <h3> Happy Hour </h3>
-    <p> 5 - 7 pm, Daily </p>
-    <h3> Dinner </h3>
-    <p> 5pm - 11pm Mon - Thu <br/>
-    5pm - 12am Fri/Sat <br/>
-    5pm - 10pm Sun </p>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Brunch</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Happy Hour</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Dinner</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="tab1">
+            <h3>Brunch</h3>
+            <p>11:00am - 3pm Sat & Sun</p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tab2">
+            <h3>Happy Hour</h3>
+            <p>5 - 7 pm, Daily</p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tab3">
+            <h3>Dinner</h3>
+            <p>5pm - 11pm Mon - Thu <br/>
+            5pm - 12am Fri/Sat <br/>
+            5pm - 10pm Sun</p>
+    </div>
     <br/>
-    <br/>
-    <br/>
+
+
     <img id="THimage" src="https://bit.ly/2kTZqIH" alt="Tom Holland GQ" style="width:50%;height:50%;" class="center"/>
 
     <!-- Optional JavaScript -->
