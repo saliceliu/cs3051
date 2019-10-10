@@ -36,3 +36,14 @@ img.menuimg {
     margin-left: 5%;
     margin-bottom: 0;
 }
+
+li a {
+
+  color: #FFFFFF;
+  padding: 16px 16px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  color: rgba(255, 255, 255, 0.534);
+}
