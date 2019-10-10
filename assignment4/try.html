@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    <router-link to="/">Home<span class="sr-only">(current)</span></router-link>
                 </li>
                 <li class="nav-item">
                     <router-link to="/about">About</router-link>
@@ -36,13 +36,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
-
 </p>
  <router-view></router-view>
 </div>
@@ -53,7 +46,22 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
    <script type="text/x-template" id="my-home">
-     <p> My home page </p>
+     <div>
+
+     <h1> About Us </h1>
+
+    <p> TH Resturant was started by a group of people who love Tom Holland.
+        We decided to start a resturant near where Tom Holland is from, hoping he will visit someday. </p>
+
+    <div class="card" style="width: 18rem;" >
+        <img src="https://bit.ly/2lMLHDY" class="card-img-top" alt="Lip Sync Battle">
+        <div class="card-body">
+            <h5 class="card-title">Lip Sync Battle</h5>
+            <p class="card-text">On top of being the MCU hero Spiderman, Tom Holland is also known for his amazing performance on Lip Sync Battle, competing with his co-star Zendaya.</p>
+            <a href="https://youtu.be/jPCJIB1f7jk" class="btn btn-primary">Watch Lip Sync Battle on YouTube <br/> (ctrl + click) </a>
+        </div>
+    </div>
+     </div>
    </script>
    <script type="text/x-template" id="my-menu">
      <p> My menu page </p>
@@ -62,7 +70,46 @@
      <p> My about page </p>
    </script>
    <script type="text/x-template" id="my-contact">
-     <p> My contact page </p>
+     <div> My contact page
+     <h1> Hours and Location </h1>
+
+    <p> Wood St, Kingston upon Thames KT1 1UJ, UK </p>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Brunch</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Happy Hour</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Dinner</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="tab1">
+            <h3>Brunch</h3>
+            <p>11:00am - 3pm Sat & Sun</p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tab2">
+            <h3>Happy Hour</h3>
+            <p>5 - 7 pm, Daily</p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tab3">
+            <h3>Dinner</h3>
+            <p>5pm - 11pm Mon - Thu <br/>
+            5pm - 12am Fri/Sat <br/>
+            5pm - 10pm Sun</p>
+    </div>
+    <br/>
+
+
+    <img id="THimage" src="https://bit.ly/2kTZqIH" alt="Tom Holland GQ" style="width:50%;height:50%;" class="center"/>
+
+
+
+     </div>
    </script>
 
 
