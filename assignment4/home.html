@@ -24,24 +24,44 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/index/">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about/">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/menu/">Menu</a>
+                    <router-link to="/menu">Menu</router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hourlocation.html">Hours and Location</a>
+                    <a class="nav-link" href="/hourlocation">Hours and Location</a>
                 </li>
             </ul>
         </div>
         </nav>
-            <router-link to="/home">Home</router-link>
-            <router-link to="/menu/">Menu</router-link>
         <router-view></router-view>
     </div>
+
+
+    <script type="text/x-template" id="my-home">
+     <p> My home page </p>
+   </script>
+   <script type="text/x-template" id="my-menu">
+     <p> My menu page </p>
+   </script>
+     <script>
+     const Home = { template: '#my-home' }
+     const Menu = { template: '#my-menu' }
+     const routes = [
+       { path: '/', component: Home },
+       { path: '/menu', component: Menu }
+     ]
+     const router = new VueRouter({
+       routes // short for routes: routes
+     })
+   const app = new Vue({
+     el: '#app', router
+   })
+   </script>
 
 
     <!-- Optional JavaScript -->
