@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- My css -->
+        <link rel="stylesheet" type="text/css" href="assign2.css"/>
+        <title>TH Restaurant</title>
+    </head>
+    <body>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <div id="app"> <p>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <router-link to="/">Home<span class="sr-only">(current)</span></router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/menu">Menu</router-link>
+                </li>
+                <li class="nav-item">
+                <router-link to="/hourlocation">Contact</router-link>
+                </li>
+                </ul>
+                </div>
+            </nav>
+        </p>
+        <router-view></router-view>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script type="text/x-template" id="my-home">
+            <div>
+
+            <h1> About Us </h1>
+
+            <p> TH Resturant was started by a group of people who love Tom Holland.
+            We decided to start a resturant near where Tom Holland is from, hoping he will visit someday. </p>
+
+            <div class="card" style="width: 18rem;" >
+            <img src="https://bit.ly/2lMLHDY" class="card-img-top" alt="Lip Sync Battle">
+            <div class="card-body">
+            <h5 class="card-title">Lip Sync Battle</h5>
+            <p class="card-text">On top of being the MCU hero Spiderman, Tom Holland is also known for his amazing performance on Lip Sync Battle, competing with his co-star Zendaya.</p>
+            <a href="https://youtu.be/jPCJIB1f7jk" class="btn btn-primary">Watch Lip Sync Battle on YouTube <br/> (ctrl + click) </a>
+            </div>
+            </div>
+            </div>
+        </script>
+    <script type="text/x-template" id="my-menu">
+    <div>
+    <h1 >Menu</h1>
+    <div id="menu_app">
+        <div class="container">
+        <div class="row">
+        <div class="col-4" v-for="item in menu">
+            <div class="card">
+              <img v-bind:src="item.img" class="card-img-top" v-bind:alt="item.description">
+              <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" v-bind:data-target="'#modal-' + item.id">
+                  Click to see a picture of {{item.name}}
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" v-bind:id="'modal-' + item.id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{item.name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <img v-bind:src="item.img" class="card-img-top" v-bind:alt="item.description">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </script>
+
+    <script type="text/x-template" id="my-contact">
+    <div> My contact page
+    <h1> Hours and Location </h1>
+
+    <p> Wood St, Kingston upon Thames KT1 1UJ, UK </p>
+
+    <ul class="nav nav-tabs">
+    <li class="nav-item">
+    <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Brunch</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">Happy Hour</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Dinner</a>
+    </li>
+    </ul>
+
+    <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade show active" id="tab1">
+    <h3>Brunch</h3>
+    <p>11:00am - 3pm Sat & Sun</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab2">
+    <h3>Happy Hour</h3>
+    <p>5 - 7 pm, Daily</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="tab3">
+    <h3>Dinner</h3>
+    <p>5pm - 11pm Mon - Thu <br/>
+    5pm - 12am Fri/Sat <br/>
+    5pm - 10pm Sun</p>
+    </div>
+    <br/>
+
+
+    <img id="THimage" src="https://bit.ly/2kTZqIH" alt="Tom Holland GQ" style="width:50%;height:50%;" class="center"/>
+
+
+
+    </div>
+    </script>
+    <script>
+    const Home = { template: '#my-home' }
+    const Menu = { template: '#my-menu' }
+    const About = { template: '#my-about' }
+    const Contact = { template: '#my-contact' }
+    const routes = [
+    { path: '/', component: Home },
+    { path: '/menu', component: Menu },
+    { path: '/hourlocation', component: Contact}
+    ]
+    const router = new VueRouter({
+    routes // short for routes: routes
+    })
+    const app = new Vue({
+    el: '#app', router
+    })
+
+    </script>
+
+
+
+
+
+    </body>
+</html>
